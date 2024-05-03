@@ -1,0 +1,11 @@
+fontes
+https://fonts.google.com/specimen/Poppins
+
+layout
+https://www.figma.com/community/file/1347975029276307234/restaurant-sujeito-programador
+
+icons
+https://drive.google.com/file/d/13lnB6_US9f8E7GpUucRSBPF-CGjAOzTR/view
+
+tailwind css
+https://tailwindcss.com/docs/installation

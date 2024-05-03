@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+    
+    <title>Cardápio Online</title>
+</head>
+<body>
+    <!--Header-->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/img/hamb-1.png" alt="Logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"/>
+
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Cardápio Com Tailwind</h1>
+
+            <span class="text-white font-midium">Rua Silvio Freitas - Jd Nova Era, 194 - RJ</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg à Dom - 18:00 as 22:00</span>
+            </div>
+        </div>
+    </header>
+    <!--Fim Header-->
+
+    <!--Inicio Menu-->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Nosso Cardápio Online</h2>
+
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--Inicio Produto-1-->
+            <div class="flex gap-2">
+                <img src="./assets/img/hamb-1.png" alt="hamburguer-mec" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hamburguer Mec</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reiciendis dolor velit officia quam atque fugiat, sed tempora nemo commodi harum ullam animi, quis assumenda reprehenderit.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18.90</p>
+
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Mec" data-price="18.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-1-->
+
+            <!--Inicio Produto-2-->
+            <div class="flex gap-2">
+                <img src="./assets/img/hamb-2.png" alt="hamburguer-duplo" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hamburguer Duplo</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reiciendis dolor velit officia quam atque fugiat, sed tempora nemo commodi harum ullam animi, quis assumenda reprehenderit.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 32.90</p>
+
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Duplo" data-price="32.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-2-->
+
+            <!--Inicio Produto-3-->
+            <div class="flex gap-2">
+                <img src="./assets/img/hamb-3.png" alt="hamburguer-Triplo" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hamburguer Triplo</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reiciendis dolor velit officia quam atque fugiat, sed tempora nemo commodi harum ullam animi, quis assumenda reprehenderit.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 42.90</p>
+
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Triplo" data-price="42.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-3-->
+
+            <!--Inicio Produto-4-->
+            <div class="flex gap-2">
+                <img src="./assets/img/hamb-4.png" alt="hamburguer-Xtremo" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hamburguer Xtremo</p>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reiciendis dolor velit officia quam atque fugiat, sed tempora nemo commodi harum ullam animi, quis assumenda reprehenderit.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 52.90</p>
+
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Xtremo" data-price="52.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Produto-4-->
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">Bebidas</h2>
+        </div>
+
+        <!--Inicio bebidas-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            
+            <!--Inicio bebida-1-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/img/refri-1.png" alt="coca-lata" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Coca-Lata</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca-Lata" data-price="6.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim bebida-1-->
+
+            <!--Inicio bebida-2-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/img/refri-2.png" alt="coca-lata" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Guarana-Lata</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.00</p>
+
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guarana-Lata" data-price="5.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim bebida-2-->
+            
+        </div>
+        <!--Fim bebidas-->    
+
+    </div>
+    <!--Fim Menu-->
+
+    <!--Modal cart-->
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            
+            <p class="font-bold mt-4">Endereço de Entrega:</p>
+
+            <input type="text" placeholder="Digite seu endereço para entrega" id="address" class="w-full border-2 p-1 rounded my-1"/>
+
+            <p class="text-red-500 hidden" id="address-warn">Digite seu Endereço Completo</p>
+
+            <div class="flex items-center justify-between mt-5">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Modal cart-->
+
+    <!--Button card footer-->
+    <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!--Fim Button card footer-->
+</body>
+</html>
