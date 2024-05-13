@@ -2,7 +2,7 @@
 
 ## Tecnologias usadas no projeto
 -Html
--Framework tailwindCss
--Javascript
+-Css com Framework tailwindCss
+-JavaScript
 
 # Link para acessar o site
