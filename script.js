@@ -24,6 +24,7 @@ let cart = [];
 
 /**evento para abrir o modal do carrinho*/
 cartBtn.addEventListener("click", function(){
+    updateCartModal();
     cartModal.style.display = "flex"
 })
 
@@ -78,16 +79,18 @@ function updateCartModal(){
 
     cart.forEach(item=> {
         const cartItemsElement = document.createElement("div")
+        cartItemsElement.classList.add("flex", "justify-between", "md-4", "flex-col")
+
         cartItemsElement.innerHTML = `
-            <div>
+            <div class="flex items-center justify-between">
                 <div>
-                    <p>${item.name}</p>
-                    <p>${item.quantity}</p>
-                    <p>R$ ${item.price}</p>
+                    <p class="font-bold">${item.name}</p>
+                    <p>Qtd: ${item.quantity}</p>
+                    <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
                 </div>
 
                 <div>
-                    <button>
+                    <button class="remove-from-cart-btn" data-name="${item.name}">
                         Remover
                     </button>
                 </div>
@@ -95,6 +98,40 @@ function updateCartModal(){
             </div>
         `
 
+        total += item.price * item.quantity;
+        
         cartItemsContainer.appendChild(cartItemsElement)
     })
+
+    cartTotal.textContent = total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
+
+    cartCounter.innerHTML = cart.length;
+}
+
+// Remover o item do carrinho
+cartItemsContainer.addEventListener("click", function(event){
+    if(event.target.classList.contains("remove-from-cart-btn")){
+        const name = event.target.getAttribute("data-name")
+        removeItemCart(name);
+    }
+})
+
+function removeItemCart(name){
+    const index = cart.findIndex(item=> item.name === name);
+
+    if(index !== -1){
+        const item = cart[index];
+        
+        if(item.quantity > 1){
+            item.quantity -= 1;
+            updateCartModal();
+            return;
+        }
+
+        cart.splice(index, 1);
+        updateCartModal();
+    }
 }
