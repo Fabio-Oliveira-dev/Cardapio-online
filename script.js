@@ -148,11 +148,22 @@ addressInput.addEventListener("input", function(event){
 
 // finalizar pedido no carrinho
 checkoutBtn.addEventListener("click", function(){
-    // const isOpen = checkRestaurantOpen();
-    // if(!isOpen){
-    //     alert("RESTAURANTE FECHADO NO MOMENTO!")
-    //     return;
-    // }
+    const isOpen = checkRestaurantOpen();
+    if(!isOpen){
+        Toastify({
+            text: "O restaurante esta fechado!",
+            duration: 5000,
+            close: true,
+            gravit: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "#ef4444",
+            },
+        }).showToast();
+
+        return;
+    }
 
     if(cart.length === 0) return;
     if(addressInput.value === ""){
@@ -172,6 +183,9 @@ checkoutBtn.addEventListener("click", function(){
     const phone = "21968917243"
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+
+    cart = [];
+    updateCartModal();
 })
 
 // verificar a hora e manupular o horario
