@@ -8,3 +8,4 @@
 - Api whatsApp
 
 # Link para acessar o site
+https://cardapio-online-weld.vercel.app/
