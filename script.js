@@ -135,3 +135,23 @@ function removeItemCart(name){
         updateCartModal();
     }
 }
+
+// pegar o que for digitado em input
+addressInput.addEventListener("input", function(event){
+    let inputValue = event.target.value;
+
+    if(inputValue !== ""){
+        addressWarn.classList.add("hidden")
+        addressInput.classList.remove("border-red-500")
+    }
+})
+
+// adicionar e remover texto de mensagem do input
+checkoutBtn.addEventListener("click", function(){
+    if(cart.length === 0) return;
+    if(addressInput.value === ""){
+        addressWarn.classList.remove("hidden")
+        addressInput.classList.add("border-red-500")
+        return;
+    }
+})
